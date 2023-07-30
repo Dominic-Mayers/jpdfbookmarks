@@ -36,7 +36,8 @@ public class CursorToolkit {
     private CursorToolkit() {
     }
 
-    /** Sets cursor for specified component to Wait cursor */
+    /** Sets cursor for specified component to Wait cursor
+     * @param component */
     public static void startWaitCursor(JComponent component) {
         RootPaneContainer root =
                 ((RootPaneContainer) component.getTopLevelAncestor());
