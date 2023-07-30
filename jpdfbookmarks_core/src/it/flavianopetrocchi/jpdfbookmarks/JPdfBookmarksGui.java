@@ -2269,13 +2269,13 @@ class JPdfBookmarksGui extends JFrame implements FileOperationListener,
 //                }
         Bookmark root = (Bookmark) bookmarksTreeModel.getRoot();
         if (root != null) {
-            Enumeration postOrderenum = root.postorderEnumeration();
+            Enumeration<Bookmark> postOrder = root.postorderEnumeration();
             //just skip the root element
-            if (postOrderenum.hasMoreElements()) {
-                postOrderenum.nextElement();
+            if (postOrder.hasMoreElements()) {
+                postOrder.nextElement();
             }
-            while (postOrderenum.hasMoreElements()) {
-                Bookmark b = (Bookmark)postOrderenum.nextElement();
+            while (postOrder.hasMoreElements()) {
+                Bookmark b = postOrder.nextElement();
                 TreePath path = new TreePath(b.getPath());
                 //bookmarksTree.collapsePath(path);
                 bookmarksTree.collapseRow(bookmarksTree.getRowForPath(path));
