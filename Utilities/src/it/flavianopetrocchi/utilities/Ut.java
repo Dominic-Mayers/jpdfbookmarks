@@ -45,7 +45,7 @@ import javax.swing.JComponent;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
-import sun.misc.CharacterEncoder;
+//import sun.misc.CharacterEncoder;
 
 /**
  * Class for utlity static methods usefull in different situations.

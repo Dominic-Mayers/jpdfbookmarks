@@ -1087,9 +1087,9 @@ public class Bookmark extends DefaultMutableTreeNode implements Serializable {
 
     public void setRemoteFilePathWithChildren(File file) {
         String path = Ut.onWindowsReplaceBackslashWithSlash(file.getPath());
-        Enumeration<Bookmark> e = this.preorderEnumeration();
-        while (e.hasMoreElements()) {
-            Bookmark b = e.nextElement();
+        Enumeration etemp = this.preorderEnumeration();
+        while (etemp.hasMoreElements()) {
+            Bookmark b  = (Bookmark) etemp.nextElement();
             setRemoteTarget(b, path);
         }
     }
